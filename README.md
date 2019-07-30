@@ -5,5 +5,4 @@ When it's finished, I will be able to fully automate MFF so you don't have to sp
 
 For great justice and for the everlasting glory of MODOK.
 
-Sincerely,
-Rank 1 Fantomex
+A public service announcement from the Rank 1 Fantomex.
