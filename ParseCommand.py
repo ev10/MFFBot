@@ -49,7 +49,7 @@ def parse(str):
         if noEnergyErr != "":
             SendKeyInput("home.png", "h")
             return noEnergyErr          
-        time.sleep(5)
+        time.sleep(4)
         SendMouseClick("close.png")
         Done = TerminateKeyInput("home.png", "h", "Done.")
         if Done != "":
