@@ -10,3 +10,5 @@ ImagePathRU = r"C:\MFFIMG_RUS" + "\\"
 SCTimeDelay = 0.15
 
 AuthToken = "discord account auth token here"
+
+CursorTimeDelay = 0.000000000000000001
