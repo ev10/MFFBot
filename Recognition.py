@@ -9,7 +9,7 @@ def locate(s):
          if (acc > 3):
             return 0
          im1 = pyautogui.screenshot()
-         coord = pyautogui.locateOnScreen(Constants.ImagePath + s, confidence = 0.8)
+         coord = pyautogui.locateOnScreen(Constants.ImagePathENG + s, confidence = 0.8)
          if (coord is not None):
             buttonpoint = pyautogui.center(coord)
             x, y = buttonpoint
