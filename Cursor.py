@@ -26,7 +26,6 @@ def MoveCursor(xDest,yDest):
 
     # Bezier curve approximation
     degree = 3 if cp > 3 else cp - 1 
-
     tck, u = scipy.interpolate.splprep([x, y], k=degree)
     u = scipy.linspace(0, 1, num=max(pyautogui.size()))
     points = scipy.interpolate.splev(u, tck)
