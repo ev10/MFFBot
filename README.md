@@ -1,4 +1,4 @@
-# MFFRotation
+# MFFBot
 Work in progress.
 
 When it's finished, I will be able to fully automate MFF so you don't have to spend your valuable time grinding.
