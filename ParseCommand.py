@@ -1,6 +1,8 @@
 import pyautogui
-import Recognition
 import time
+
+import Recognition
+import Start
 
 def SendKeyInput(a, b):
     if (Recognition.locate(a)) == 1:
@@ -14,6 +16,13 @@ def TerminateKeyInput(a, b, c):
         return ""
 
 def parse(str):
+    #start up the emulator
+    if (str == "-init"):
+        Start.start()
+        Done = TerminateKeyInput("icon.png", "enter", "App opened.")
+        if (Done != ""): return Done
+        else: return "Error starting up the app."
+        
     #return to home
     if (str == "-h"):
         SendKeyInput("home.png", "h")
