@@ -93,4 +93,5 @@ def findMousePosition():
 
 def press(key):
     PressKey(key)
+    time.sleep(1)
     ReleaseKey(key)
