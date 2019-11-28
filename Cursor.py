@@ -5,6 +5,8 @@ import time
 from scipy import interpolate
 import Constants
 
+#Simulate human mouse movement with Bezier curve
+
 def MoveCursor(xDest,yDest):
     cp = random.randint(3, 5)
     x1, y1 = pyautogui.position()  # Starting position
