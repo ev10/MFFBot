@@ -1,8 +1,8 @@
 # MFFBot
-Work in progress.
+Unfinished.
 
-When it's finished, I will be able to automate most of MFF so you don't have to spend your valuable time grinding.
+Current functionality: dimension missions, collect antimatter from lab
 
 For great justice and for the everlasting glory of MODOK.
 
-модок вперед
+модок вперед!!
