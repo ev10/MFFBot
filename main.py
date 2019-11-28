@@ -8,7 +8,6 @@ import cv2 as cv
 import Constants
 import ParseCommand
 
-
 client = discord.Client()
 @client.event
 async def on_ready():
