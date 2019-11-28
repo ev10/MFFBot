@@ -1,9 +1,17 @@
 import pyautogui
 import time
-
+import Cursor
 import Recognition
 import Start
 
+def SendMouseClick(a):
+    x, y = Recognition.getXYCoord(a)
+    print(x,y)
+    if (x != -999 & y != -999):
+        Cursor.MoveCursor(x,y)
+        pyautogui.click(x,y)
+        time.sleep(0.5)
+        
 def SendKeyInput(a, b):
     if (Recognition.locate(a)) == 1:
         pyautogui.press(b)
@@ -29,27 +37,32 @@ def parse(str):
 
     #run dimension missions
     if (str == "-dm"):
-        SendKeyInput("home.png", "h")
-        SendKeyInput("enter.png", "e")
-        SendKeyInput("dm.png", "n")
-        SendKeyInput("ready.png", "r")
-        SendKeyInput("clear.png", "r")
-        SendKeyInput("cmax.png", "n")
+        SendMouseClick("home.png")
+        SendMouseClick("enter.png")
+        SendMouseClick("dm.png")
+        SendMouseClick("ready.png")
+        SendMouseClick("clear.png")
+        SendMouseClick("cmax.png")
+        SendMouseClick("home.png")
+
         noEnergyErr = TerminateKeyInput("noenergy.png", "n", "Out of energy. Returning to home.")
         if noEnergyErr != "":
             SendKeyInput("home.png", "h")
             return noEnergyErr          
-        time.sleep(1)
-        SendKeyInput("close.png", "k")
-        SendKeyInput("home.png", "h")
-        return "Done."
+        time.sleep(5)
+        SendMouseClick("close.png")
+        Done = TerminateKeyInput("home.png", "h", "Done.")
+        if Done != "":
+            return "Done."
+        else: return "Error."
 
     #collect antimatter from store
     if (str == "-lab col"):
-        SendKeyInput("home.png", "h")
-        SendKeyInput("list.png", "c")
-        SendKeyInput("lab.png", "1")
-        SendKeyInput("amcollect.png", "k")
+        SendMouseClick("home.png")
+        SendMouseClick("list.png")
+        SendMouseClick("lab.png")
+        SendMouseClick("amcollect.png")
+        time.sleep(0.5)
         Done = TerminateKeyInput("home.png", "h", "Antimatter collected. Returning to home.")
         if Done != "":
             return Done
