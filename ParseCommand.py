@@ -33,10 +33,12 @@ def parse(str):
         
     #return to home
     if (str == "-h"):
+        Start.openApp()
         SendKeyInput("home.png", "h")
 
     #run dimension missions
     if (str == "-dm"):
+        Start.openApp()
         SendMouseClick("home.png")
         SendMouseClick("enter.png")
         SendMouseClick("dm.png")
@@ -58,6 +60,7 @@ def parse(str):
 
     #collect antimatter from store
     if (str == "-lab col"):
+        Start.openApp()
         SendMouseClick("home.png")
         SendMouseClick("list.png")
         SendMouseClick("lab.png")
@@ -68,6 +71,34 @@ def parse(str):
             return Done
         else:
             return "An error occurred."
+    
+    #Legendary battle: Loki Ragnarok 
+    if (str == "-lb"):
+        Start.openApp()
+        SendMouseClick("start.png")
+        pyautogui.press("l")
+        time.sleep(10)
+        pyautogui.press("l")
+        while True:
+            if (Recognition.locate("repeat.png")):
+                pyautogui.press("l")
+                time.sleep(4)
+                return "Stage complete."
+            pyautogui.press("l")
+            pyautogui.press("l")
+            time.sleep(0.5)
+            pyautogui.press(";")
+            pyautogui.press(";")
+            time.sleep(0.5)
+            pyautogui.press("'")
+            pyautogui.press("'")
+            time.sleep(0.5)
+            pyautogui.press("[")
+            pyautogui.press("[")
+            time.sleep(0.5)
+            pyautogui.press("p")
+            pyautogui.press("p")
+            time.sleep(0.5)
 
     return ""
 
